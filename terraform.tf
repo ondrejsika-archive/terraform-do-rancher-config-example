@@ -53,7 +53,6 @@ resource "rancher2_node_template" "do" {
   name = "do"
   description = "foo test"
   digitalocean_config {
-    access_token = rancher2_cloud_credential.do.id
     image = "debian-9-x64"
     region = "fra1"
     size = "s-2vcpu-4gb"
