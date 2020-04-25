@@ -52,6 +52,7 @@ resource "rancher2_cloud_credential" "do" {
 resource "rancher2_node_template" "do" {
   name = "do"
   description = "foo test"
+  cloud_credential_id = rancher2_cloud_credential.do.id
   digitalocean_config {
     image = "debian-9-x64"
     region = "fra1"
